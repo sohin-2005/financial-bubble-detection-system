@@ -1,0 +1,233 @@
+date,source,headline,relevance_score,positive,negative,neutral,polarity,label
+2026-02-27,Ibtimes.com.au,"Applied Optoelectronics Stock Explodes 45% on Stellar Q4 Earnings Beat, Bullish AI-Driven Guidance",5,0.9361,0.0393,0.0246,0.8968,positive
+2026-02-27,Slashdot.org,"Takeaways from Hillary Clinton's deposition. And, Paramount outbids for Warner Bros. - NPR",2,0.0893,0.0141,0.8966,0.0752,neutral
+2026-02-27,Yahoo Entertainment,Why Compass and Rocket say their partnership is the remedy for high home prices,1,0.3146,0.0154,0.67,0.2992,neutral
+2026-02-27,Morningstar.com,Novo Nordisk Shares Fall After Latest CagriSema Obesity Drug Trial Results — Update,1,0.0077,0.9574,0.0349,-0.9496,negative
+2026-02-27,Motley Fool Australia,Coles or Woolworths shares: Which is the better dividend stock for 2026?,3,0.0453,0.0203,0.9344,0.0249,neutral
+2026-02-27,OilPrice.com,Gulf Oil Producers Open the Taps as Iran Risk Premium Builds,1,0.1691,0.1371,0.6938,0.032,neutral
+2026-02-27,Forbes,"The Market’s Mixed Leadership May Be Rotation, Not A Recession Signal",1,0.0509,0.7988,0.1503,-0.7479,negative
+2026-02-27,Ibtimes.com.au,GameStop Stock Holds Steady Near $24 Amid Acquisition Speculation and Strong Cash Position,4,0.9332,0.0341,0.0327,0.8991,positive
+2026-02-27,The Times of India,US stock market crash big losers and gainers today: Here's complete list,5,0.0288,0.1657,0.8056,-0.1369,neutral
+2026-02-27,The Times of India,"BTC USD price today drops to $65,000 level: Why is Bitcoin on track for its worst month since 2022 crypto crash?",2,0.0088,0.9564,0.0348,-0.9477,negative
+2026-02-27,Ibtimes.com.au,"Dell Technologies Stock Surges 20% on Blowout Q4 Earnings, AI Server Boom Drives Record Results",3,0.8672,0.0896,0.0432,0.7776,positive
+2026-02-27,Jezebel,"Citing AI, Jack Dorsey Fired 40% of His Staff and Block Stock Popped. This Is Fine.",1,0.0083,0.9574,0.0343,-0.9491,negative
+2026-02-27,IPWatchdog.com,"Other Barks & Bites for Friday, February 27: UK Trademarks No Longer Within Scope of EU Law Post-Brexit; Second Circuit Reverses Ruling on Concert Rates Under BMI Consent Decree; USPTO Employee Pays $500K to Resolve Conflict of Interest Allegations",2,0.0196,0.9146,0.0658,-0.895,negative
+2026-02-27,Yahoo Entertainment,Can Netflix Stock Beat the Market?,2,0.2271,0.0157,0.7571,0.2114,neutral
+2026-02-27,CoinDesk,"Bitcoin' rebound cancelled as U.S. stocks fall, gold surges, amid mounting macro risks",2,0.2358,0.7391,0.0251,-0.5033,negative
+2026-02-27,Business Insider,Citi sounds the alarm for a deflationary spiral if AI sparks high unemployment and only benefits a small elite,1,0.0384,0.9266,0.035,-0.8883,negative
+2026-02-27,Financial Post,upGrad Acquires World’s Largest Internship Platform – Internshala,4,0.3155,0.0095,0.675,0.306,neutral
+2026-02-27,GamesIndustry.biz,The Warner Bros. acquisition: a timeline of events so far,1,0.0274,0.034,0.9386,-0.0065,neutral
+2026-02-27,GlobeNewswire,Deadline Alert: NuScale Power Corporation (SMR) Shareholders Who Lost Money Urged To Contact Glancy Prongay Wolke & Rotter LLP About Securities Fraud Lawsuit,1,0.0163,0.8087,0.1749,-0.7924,negative
+2026-02-27,GlobeNewswire,Deadline Alert: Smart Digital Group Limited (SDM) Shareholders Who Lost Money Urged To Contact Glancy Prongay Wolke & Rotter LLP About Securities Fraud Lawsuit,2,0.017,0.8189,0.1641,-0.8019,negative
+2026-02-27,MarketBeat,TWFG Q4 Earnings Call Highlights,3,0.0386,0.1054,0.856,-0.0667,neutral
+2026-02-27,CNBC,"CoreWeave CEO defends spending plans, tries to combat debt narrative as stock plummets nearly 20%",1,0.0565,0.8262,0.1173,-0.7697,negative
+2026-02-27,The Times of India,Sleeping 6 hours and feeling fine? CMC Vellore doctor shares the danger you don't notice,2,0.0906,0.026,0.8834,0.0647,neutral
+2026-02-27,Federalreserve.gov,FEDS Paper: Disruptions to Foreign Trade and U.S. Banks' Returns,1,0.0096,0.9472,0.0432,-0.9376,negative
+2026-02-27,HuffPost,"U.S. Stocks Sink, Oil Prices Rise As Inflation, AI, War Worries Hit Wall Street",2,0.0514,0.8801,0.0685,-0.8287,negative
+2026-02-27,The Times of India,"Dow, S&P 500 and Nasdaq post worst month in 11 months — is the AI stock boom losing momentum? what investors need to know about the 2026 US stock market outlook",4,0.013,0.8762,0.1108,-0.8632,negative
+2026-02-27,The Times of India,SBI block deal: BNP Paribas buys 5.28 lakh shares in a Rs 64 crore transaction,1,0.3988,0.0165,0.5848,0.3823,neutral
+2026-02-27,Capital10x.com,Cambria Gold Mines Announces Commencement of Infill Drilling at the Premier Gold Project and Marketing Services Update - Capital 10X,1,0.1118,0.0126,0.8756,0.0992,neutral
+2026-02-27,The Times of India,"Infosys ADRs tumble 5%, Wipro slips over 3% as Wall Street rattled by inflation data and AI fears",1,0.0135,0.9581,0.0284,-0.9447,negative
+2026-02-27,SiliconANGLE News,"As OpenAI raises its megaround, Anthropic’s battles multiply, and the SaaSpocalypse widens — but Dell cashes in",1,0.8847,0.0353,0.08,0.8493,positive
+2026-02-27,Wired,Wall Street Has AI Psychosis,1,0.0342,0.8307,0.135,-0.7965,negative
+2026-02-27,Ibtimes.com.au,JPMorgan Chase & Co. (JPM) Stock Experiences Volatility Amid Strong Outlook and CEO Warnings,4,0.4975,0.4737,0.0288,0.0238,positive
+2026-02-27,Slashdot.org,"Stock Market Today: SPY, QQQ Dragged Down by Nvidia amid ‘Positive’ U.S.-Iran Talks - TipRanks",2,0.0156,0.9667,0.0177,-0.9511,negative
+2026-02-27,Observer,The ESG Era Is Over. Western Capital Must Now Choose a Side.,4,0.0576,0.0275,0.9149,0.0301,neutral
+2026-02-27,Ibtimes.com.au,Alphabet Inc. Shares Dip on Heavy AI Spending Outlook Despite Strong Earnings Momentum,3,0.0117,0.9623,0.026,-0.9507,negative
+2026-02-27,Ibtimes.com.au,Nokia Oyj Shares Hold Steady Amid AI Push and Telecom Partnerships,1,0.7795,0.1822,0.0383,0.5973,positive
+2026-02-27,Financial Post,"S&P 500 Falls as Risk Off Prevails, Block Cuts Spur AI Anxiety",2,0.0219,0.9478,0.0303,-0.9259,negative
+2026-02-27,BusinessLine,Why the concern over capital flows,1,0.0463,0.1002,0.8535,-0.0538,neutral
+2026-02-27,BusinessLine,‘80% of stocks under bear grip despite Nifty near all-time high’,3,0.6022,0.276,0.1219,0.3262,positive
+2026-02-27,Pypi.org,trading-skills 0.1.6,3,0.0589,0.0331,0.908,0.0258,neutral
+2026-02-27,Freerepublic.com,"Core wholesale prices rose 0.8% in January, much more than expected",1,0.955,0.0243,0.0207,0.9307,positive
+2026-02-27,Untold-arsenal.com,FA’s trust in Fifa results in potential huge losses for football from World Cup,1,0.1511,0.8206,0.0283,-0.6695,negative
+2026-02-27,Slashdot.org,"Stocks sell off on tech struggles and hot U.S. inflation report, Dow slides 700 points: Live updates - CNBC",3,0.0474,0.691,0.2615,-0.6436,negative
+2026-02-27,The Times of India,"Vishal Mega Mart bulk deal: Govt of Singapore, HDFC MF buy stakes as promoter sells 14% for Rs 7,636 crore",2,0.3294,0.014,0.6566,0.3154,neutral
+2026-02-27,Yahoo Entertainment,What Makes Occidental Petroleum Corporation (OXY) an Investment Bet?,2,0.0334,0.0322,0.9344,0.0013,neutral
+2026-02-27,Business Insider,Block's layoffs illustrate the market conundrum at the heart of the viral Citrini report,2,0.013,0.9046,0.0824,-0.8916,negative
+2026-02-27,The Local Germany,German inflation unexpectedly slows in February,2,0.0179,0.9594,0.0226,-0.9415,negative
+2026-02-27,Yahoo Entertainment,What Makes APi Group (APG) a Strong Investment?,1,0.1218,0.0096,0.8685,0.1122,neutral
+2026-02-27,The Times of India,"Dow Jones free fall today: Why did the Dow crash 800 points — inflation shock, Iran war fear and AI disruption slam US stock market on the last February trading day",5,0.0267,0.7823,0.191,-0.7556,negative
+2026-02-27,Yahoo Entertainment,Here’s What Lifted General Motors (GM) in Q4,1,0.1201,0.0138,0.8661,0.1063,neutral
+2026-02-27,Yahoo Entertainment,O’Reilly Automotive (ORLY) is Accelerating New Store Openings in 2026,1,0.7829,0.0104,0.2067,0.7726,positive
+2026-02-27,Observer,Jack Dorsey Cut Half of Block’s Workforce and Wall Street Threw a Party,1,0.0199,0.8792,0.1009,-0.8593,negative
+2026-02-27,GlobeNewswire,"Credit Markets Flash Red: Are We Repeating the Early Mistakes of 2008? Michael S. Eisenga, CEO, First American Properties provides insight",1,0.0283,0.4669,0.5049,-0.4386,neutral
+2026-02-27,Yahoo Entertainment,Do You Believe in the Long-Term Growth Potential of Performance Food Group Company (PFGC)?,1,0.4368,0.008,0.5552,0.4289,neutral
+2026-02-27,The Times of India,"Dell shares jump 17%, hit 3-month highs on forecast to double AI server revenue",1,0.9413,0.027,0.0317,0.9143,positive
+2026-02-27,Weandthecolor.com,An Adobe InDesign Resume and Cover Letter Template That Proves Less Is Always More,1,0.1174,0.0223,0.8603,0.0951,neutral
+2026-02-27,The Times of India,"Why is the US stock market sinking deep in red today? Dow Jones, S&P 500, Nasdaq crash as hot inflation data and AI fears shake Wall Street",4,0.0234,0.8486,0.1281,-0.8252,negative
+2026-02-27,The Times of India,US Stocks: CoreWeave shares slump 15% as doubling capital expenditure sparks margin concerns,2,0.0102,0.9737,0.0161,-0.9635,negative
+2026-02-27,MarketingProfs.com,"AI Update, February 27, 2026: AI News and Views From the Past Week",1,0.0302,0.0352,0.9345,-0.005,neutral
+2026-02-27,Business Insider,"Inflation fears have returned, and stocks are getting hammered",3,0.4523,0.4588,0.0889,-0.0065,negative
+2026-02-27,CNBC,UBS downgrades the U.S. stock market. Here's what has the investment bank worried,3,0.0224,0.5818,0.3958,-0.5594,negative
+2026-02-27,The Times of India,"US stock markets today: Dow Jones crashes 500 points, Nasdaq drops over 1% as AI worries spook investors",4,0.0136,0.9624,0.024,-0.9487,negative
+2026-02-27,The Irish Times,OpenAI secures up to €93bn in record funding deal,1,0.8512,0.0073,0.1415,0.844,positive
+2026-02-27,Yahoo Entertainment,"Nio Blitzes SUV Market: Flagship ES9, Onvo L80 Set For May Launch",1,0.0973,0.0178,0.8849,0.0795,neutral
+2026-02-27,Financial Post,Canada GDP Shrinks 0.6% in Fourth Quarter as Inventory Drops,1,0.0098,0.9742,0.016,-0.9644,negative
+2026-02-27,The Times of India,"Investors' preference shifting from FDs, real estate to equities, post Covid: Zerodha's Nithin Kamath",2,0.1118,0.0166,0.8716,0.0951,neutral
+2026-02-27,Coinjournal.net,HBAR price slips to $0.10 as Bitcoin weakness sparks bearish breakdown risk,1,0.0273,0.9395,0.0331,-0.9122,negative
+2026-02-27,The Times of India,XED to launch GIFT City's first IPO of USD12 mn; public issue to open on March 6,2,0.1374,0.0081,0.8545,0.1293,neutral
+2026-02-27,BusinessLine,Sensex plunges 961 points; Nifty slips below 200-day EMA as broad selloff grips markets,6,0.0316,0.9522,0.0162,-0.9207,negative
+2026-02-27,GlobeNewswire,Green Technology and Sustainability Market Surges to $73.90 billion by 2030 | CAGR 23.7%,2,0.9368,0.0162,0.047,0.9205,positive
+2026-02-27,Europa.eu,Decisions taken by the Governing Council of the ECB (in addition to decisions setting interest rates),1,0.026,0.0312,0.9428,-0.0051,neutral
+2026-02-27,Plos.org,Food-based multisensory stimulation ameliorates cognitive impairment after mild traumatic brain injury in male rats by modulating intestinal and brain inflammation,1,0.0943,0.0141,0.8915,0.0802,neutral
+2026-02-27,NerdWallet,"Mortgage Rates Today, Friday, February 27: We’re in the Fives",1,0.1507,0.0486,0.8007,0.1022,neutral
+2026-02-27,BusinessLine,"CAs’ body flags hurdles in research analyst registration, seeks clarity from SEBI",1,0.0358,0.1248,0.8394,-0.089,neutral
+2026-02-27,PR Newswire UK,NYSE Content Update: Grindr Reports 28% Full Year Revenue Growth in Q4 Earnings,4,0.9455,0.0161,0.0384,0.9294,positive
+2026-02-27,Yahoo Entertainment,Warner Bros. Discovery (WBD) Rallies Nearly 50% on Acquisition Activity,1,0.9338,0.0346,0.0316,0.8993,positive
+2026-02-27,Hacker News,"Show HN: I tracked 3,519 stock picks from 23 Substacks – who makes money?",1,0.0361,0.0289,0.935,0.0073,neutral
+2026-02-27,Yahoo Entertainment,The Cybersecurity Market Is Set to Double to $300 Billion by 2030. Here's the Best Artificial Intelligence (AI) Stock to Buy Now.,2,0.1576,0.011,0.8314,0.1467,neutral
+2026-02-27,GlobeNewswire,Enzon Announces Extension of Exchange Offer Relating to Series C Non-Convertible Redeemable Preferred Stock,1,0.4142,0.0193,0.5666,0.3949,neutral
+2026-02-27,GlobeNewswire,GraniteShares Announces Weekly Distributions for its YieldBOOST FoFs ETFs: YBST and YBTY,1,0.0441,0.0271,0.9287,0.017,neutral
+2026-02-27,CryptoSlate,"Bitcoin price rally is riding record $1.2 trillion margin debt, and the unwind could be here already",3,0.067,0.2332,0.6998,-0.1662,neutral
+2026-02-27,GlobeNewswire,SNOW Stockholder Alert: Robbins LLP Reminds Investors of the Class Action Lawsuit Filed Against Snowflake Inc.,1,0.0876,0.2425,0.6699,-0.155,neutral
+2026-02-27,GlobeNewswire,"Trump Media & Technology Group, TAE Technologies, and Texas Ventures Acquisition III Announce Discussions Regarding Spin-Off of Truth Social",1,0.0501,0.0138,0.9361,0.0362,neutral
+2026-02-27,Fortune,Exclusive analysis: we looked at the 400 western firms still in Russia. Their paltry size strips Putin’s bluff bare naked,1,0.0969,0.0456,0.8575,0.0513,neutral
+2026-02-27,GlobeNewswire,AMC Robotics Corporation Announces Strategic Collaboration with Sunward Logistics USA LLC for NovaArm™ Sorting Robot Deployment,1,0.8901,0.0092,0.1006,0.8809,positive
+2026-02-27,Thefutoncritic.com,Paramount to Acquire Warner Bros. Discovery to Form Next-Generation Global Media and Entertainment Company,1,0.0523,0.0128,0.9349,0.0394,neutral
+2026-02-27,BusinessLine,Gaudium IVF ends 1.87% higher at ₹80.48 after listing higher,1,0.5541,0.2085,0.2374,0.3457,positive
+2026-02-27,PCMag.com,It's the Year of the Lens at the CP+ Show. Where Are the New Cameras?,1,0.0623,0.0213,0.9164,0.041,neutral
+2026-02-27,PCWorld,‘Fake frames:’ An uncomfortable truth about DLSS,1,0.0452,0.2146,0.7402,-0.1694,neutral
+2026-02-27,The Times of India,US Markets | Sunway Healthcare launches prospectus for up to $736 million IPO,2,0.1199,0.017,0.8631,0.1029,neutral
+2026-02-27,GlobeNewswire,"KSA Construction Equipment Finance Industry Report 2025: $2.8 Bn Growth Drivers, Trends, Opportunities & Forecast to 2030",1,0.1741,0.0155,0.8104,0.1586,neutral
+2026-02-27,The Times of India,"After Friday crash, GIFT Nifty jumps on GDP data. How will stock market react on Monday?",8,0.0511,0.1576,0.7914,-0.1065,neutral
+2026-02-27,GlobeNewswire,Bakkt Announces Pricing of $48.125 Million Registered Direct Offering,2,0.0722,0.0112,0.9165,0.061,neutral
+2026-02-27,GlobeNewswire,"Saudi Arabia Building Information Modeling Market Report 2025-2030: Adoption Driven by Government Infrastructure Initiatives, Sustainability Mandates and Machine Learning-Enabled Project Optimization",1,0.4442,0.0084,0.5474,0.4357,neutral
+2026-02-27,GlobeNewswire,"Saudi Arabia Earthmoving Equipment Industry Report 2025-2030: Riyadh, Jeddah and Dammam Lead Demand as Government-Funded Projects and Industrial Growth Drive Excavator and Loader Adoption",1,0.9147,0.0528,0.0326,0.8619,positive
+2026-02-27,The Times of India,Listed non-banking finance firm Credent Global Finance raises Rs 30 crore via QIP,3,0.78,0.0122,0.2077,0.7678,positive
+2026-02-27,Financial Post,"Enwex Netherlands, France and Spain Wind Futures Now Live for Trading on Abaxx Exchange",2,0.0399,0.0143,0.9459,0.0256,neutral
+2026-02-27,The Times of India,"Steel HRC prices hit 2-year high at ₹54,000/tonne; how long will the rally last?",2,0.2507,0.0353,0.714,0.2154,neutral
+2026-02-27,Economictimes.com,"Gainers & Losers: Redington, Tejas Networks among 8 stocks in limelight on Friday",4,0.2393,0.0275,0.7331,0.2118,neutral
+2026-02-27,The Times of India,Explained: Why Redington shares soared 17% after Apple’s teaser ‘big week ahead’,1,0.9341,0.0168,0.0491,0.9173,positive
+2026-02-27,The Times of India,"Astra Microwave to demerge space, meteorology & hydrology biz into a separately listed entity",3,0.0409,0.0124,0.9466,0.0285,neutral
+2026-02-27,The Times of India,"India rupee logs first monthly gain in ten, traders eye seasonality test",2,0.7323,0.1535,0.1142,0.5787,positive
+2026-02-27,Fortune,U.S. stocks are being battered by ‘AI derangement syndrome’ and CEOs are learning not to talk about it,2,0.0161,0.9301,0.0538,-0.914,negative
+2026-02-27,Economictimes.com,​Lupin among 7 stocks that hit 52-week high; rally up to 25% in a month​,6,0.9427,0.0209,0.0364,0.9217,positive
+2026-02-27,BusinessLine,Rupee falls 8 paise to settle at 90.99 against US dollar,1,0.0713,0.8999,0.0288,-0.8286,negative
+2026-02-27,BusinessLine,Sri Lanka’s 1st Blue Bond dually listed on NSE IX at GIFT City,1,0.1257,0.01,0.8643,0.1157,neutral
+2026-02-27,Abcnews.com,World shares are mostly higher in a week dominated by AI news,3,0.935,0.0259,0.0391,0.9092,positive
+2026-02-27,The Times of India,Vaccine maker Bharat Biotech said to mull $500 million IPO,1,0.0377,0.0283,0.934,0.0094,neutral
+2026-02-27,Financial Post,Clean Energy Developer ThomasLloyd to Go Public Via SPAC Deal,1,0.0813,0.0082,0.9104,0.0731,neutral
+2026-02-27,Moneycontrol,Nifty Tests Crucial Support Zone; Index Down Nearly A Percent For The Week | Closing Bell Live,1,0.009,0.9727,0.0182,-0.9637,negative
+2026-02-27,Free Press Journal,"SJVN Limited Announces Retirement Of Two Senior Executives Effective February 27, 2026",1,0.0152,0.5724,0.4124,-0.5572,negative
+2026-02-27,Fox News,"Corporate America is on the move, and these red states are cashing in",2,0.514,0.045,0.441,0.469,positive
+2026-02-27,GlobeNewswire,FAU Economists: Delayed Data and Policy Shocks Leave Fed Cautious on Rates,2,0.0147,0.9541,0.0312,-0.9394,negative
+2026-02-27,The Star Online,Northbound Pedas Linggi lay-by to close for 18 months starting March 1,1,0.014,0.7654,0.2206,-0.7515,negative
+2026-02-27,The Times of India,Short-term traders should stay cautious; more weakness likely ahead: CA Rudramurthy BV,3,0.0972,0.4223,0.4805,-0.325,neutral
+2026-02-27,pymnts.com,"Mastercard: Small Business Growth Hinges on Using Tech Better, Not Chasing Trends",1,0.232,0.0129,0.7552,0.2191,neutral
+2026-02-27,Financial Post,European Stocks Eye Longest Monthly Winning Streak Since 2013,3,0.6581,0.1465,0.1954,0.5116,positive
+2026-02-27,BusinessLine,Glenmark to launch generic sodium phosphates injection in US,1,0.3973,0.0076,0.5951,0.3897,neutral
+2026-02-27,Economictimes.com,These 12 largecap stocks rally 50-80% in less than a year. Do you own any?,3,0.1092,0.0249,0.866,0.0843,neutral
+2026-02-27,BusinessLine,GIFT City’s first-ever IPO to open on March 6,2,0.1068,0.0089,0.8843,0.0979,neutral
+2026-02-27,Thechronicle.com.gh,CMC seeks to ‘ELEVATE’ Ghana’s cocoa sector amid global shocks,1,0.8289,0.0081,0.163,0.8208,positive
+2026-02-27,BusinessLine,TRUST MF launches mid-cap NFO,3,0.1384,0.0226,0.8391,0.1158,neutral
+2026-02-27,The Times of India,"Rs 3 lakh crore wiped out! Sensex tumbles 600 points, Nifty below 25,300. Key factors behind market decline",6,0.0217,0.6031,0.3752,-0.5814,negative
+2026-02-27,The Times of India,"L&T Finance, Utkarsh SFB, Fusion Finance tank up to 11% as Bihar passes MFI Bill 2026. Here’s what’s causing pain",1,0.1953,0.0151,0.7897,0.1802,neutral
+2026-02-27,Mynation.com,India’s Real Estate Enters a Structural Growth Phase: Ashish Joshi on Institutional Depth and Governance-Led Investing,1,0.6305,0.0111,0.3584,0.6195,positive
+2026-02-27,Yahoo Entertainment,National Bank Raises Bank of Montreal (BMO) Price Target While Maintaining Sector Perform,1,0.7242,0.0245,0.2514,0.6997,positive
+2026-02-27,Naturalnews.com,"Jack Dorsey’s AI Purge: 4,000 Jobs Axed as Investors Applaud",1,0.0108,0.9588,0.0304,-0.9479,negative
+2026-02-27,GlobeNewswire,Lassila & Tikanoja Plc Financial Statements Release January - December 2025,1,0.017,0.062,0.921,-0.045,neutral
+2026-02-27,GlobeNewswire,Kamirai Defies the Bear Market: Presale Surges to Stage 3 Following Monumental 150 Billion Token Allocation,2,0.9169,0.0243,0.0588,0.8926,positive
+2026-02-27,BusinessLine,Gaudium IVF shares jump 5% in stock market debut,4,0.889,0.0404,0.0706,0.8486,positive
+2026-02-27,The Times of India,JGB yields fall on demand for portfolio adjustment,2,0.0113,0.9641,0.0246,-0.9527,negative
+2026-02-27,The Times of India,IT doomsday rub-off effect! Realty stocks fall up to 20% this year. Should you buy the fear?,1,0.0116,0.9518,0.0366,-0.9403,negative
+2026-02-27,The Times of India,March seasonality shows a joyride for bulls as Nifty ended positive 8 times in past 10 years. Here’s why,4,0.2186,0.0196,0.7618,0.199,neutral
+2026-02-27,The Times of India,Tejas Networks shares jump 26% in 2 days after winning 5G Massive MIMO contract,1,0.9307,0.0207,0.0485,0.91,positive
+2026-02-27,BusinessLine,"Nifty Bank Prediction Today – February 27, 2026: Nifty Bank futures: Bears take control",2,0.1472,0.0534,0.7994,0.0938,neutral
+2026-02-27,The Times of India,"Earnings cycle in sweet spot, though growth expectations may reset: Nirmal Jain",1,0.8446,0.0737,0.0818,0.7709,positive
+2026-02-27,Digiday,The case for and against publisher content marketplaces,1,0.0454,0.0455,0.9091,-0.0002,neutral
+2026-02-27,BusinessLine,Rupee falls 4 paise to 90.95 against US dollar in early trade,1,0.0892,0.8809,0.0299,-0.7917,negative
+2026-02-27,BusinessLine,"Nifty Prediction Today – February 27, 2026: Nifty 50 Futures: Bearish. Can fall more. Go short",2,0.0337,0.9109,0.0554,-0.8772,negative
+2026-02-27,The Times of India,"PSU banks a sweet spot, consumption stocks remain a trap: Jitendra Gohil",3,0.0674,0.0655,0.8671,0.0019,neutral
+2026-02-27,BusinessLine,"Sensex, Nifty drag on Nvidia hangover, but IT stocks buck trend",5,0.7377,0.2122,0.0501,0.5255,positive
+2026-02-27,The Times of India,"Sensex plunges over 400 pts; Nifty below 25,350 as FMCG, bank stocks drag",6,0.0319,0.9256,0.0425,-0.8937,negative
+2026-02-27,The Times of India,"Binance cannot force arbitration in crypto loss claims, says US judge",2,0.0447,0.272,0.6833,-0.2273,neutral
+2026-02-27,The Times of India,360 ONE's Mayur Patel spots opportunities in 4 sectors for your FY27 portfolio,2,0.429,0.0103,0.5607,0.4188,neutral
+2026-02-27,The Times of India,Doomsday or deep value: India's IT stocks at crossroads after 20% crash,4,0.1704,0.4758,0.3538,-0.3054,negative
+2026-02-27,The Times of India,Hindalco shares in focus as US govt shutdown delays $125 million AluChem deal process,2,0.0812,0.6656,0.2533,-0.5844,negative
+2026-02-27,The Times of India,"Omnitech Engineering IPO Day 3: Check GMP, subscription status, and broker views",2,0.0192,0.034,0.9468,-0.0148,neutral
+2026-02-27,The Times of India,Vishal Mega Mart shares in focus as promoter likely sells 6.5% stake via block deal: Report,3,0.038,0.0244,0.9377,0.0136,neutral
+2026-02-27,Linkedin.com,Multichannel Marketing Hubs Market Expansion Opportunities and Risk Signals,2,0.3936,0.0123,0.5941,0.3812,neutral
+2026-02-27,The Times of India,"Aussie jumps, yen slumps as rates play dominates in February",2,0.0357,0.9389,0.0254,-0.9032,negative
+2026-02-27,The Times of India,"Acetech E-Commerce IPO: Check GMP, price band, subscription and other details",3,0.0222,0.0261,0.9517,-0.0039,neutral
+2026-02-27,The Times of India,Gaudium IVF shares to list today. Check GMP ahead of debut,6,0.0209,0.0635,0.9156,-0.0426,neutral
+2026-02-27,BusinessLine,Nifty may start lower amid global risk aversion and stalled US-Iran talks,2,0.0832,0.8968,0.0199,-0.8136,negative
+2026-02-27,Economictimes.com,Sensex Today | Nifty 50 | Stock Market Live Updates: GIFT Nifty signals a negative start; Asian shares trade lower,7,0.0144,0.9666,0.019,-0.9521,negative
+2026-02-27,Economictimes.com,Positive Breakout: These 12 stocks cross above their 200 DMAs,3,0.9249,0.0405,0.0346,0.8844,positive
+2026-02-27,The Times of India,Manilam Industries India shares to list today. Here's what GMP indicates,3,0.0274,0.0284,0.9442,-0.0011,neutral
+2026-02-27,The Times of India,"PNGS Reva Diamond Jewellery IPO allotment today. Check status, GMP and other details",4,0.0227,0.0318,0.9455,-0.0092,neutral
+2026-02-27,BusinessLine,Stock Market Live: Stock to buy today: Samvardhana Motherson International,6,0.0377,0.0228,0.9395,0.0148,neutral
+2026-02-27,Livemint,"Pick broad market indices over themes for passive investing, says Angel One AMC's Hemen Bhatia",1,0.116,0.0133,0.8706,0.1027,neutral
+2026-02-27,The Times of India,Pre-market action: Here's the trade setup for today's session,2,0.0288,0.0279,0.9433,0.0008,neutral
+2026-02-27,The Times of India,Market players must put ID info in social media posts: Sebi,2,0.0204,0.0325,0.9471,-0.0121,neutral
+2026-02-27,The Times of India,NSE invites investment banks to pitch for managing IPO,3,0.1018,0.0108,0.8875,0.091,neutral
+2026-02-27,The Times of India,HDFC Bank tightens locker access rules,1,0.042,0.7922,0.1658,-0.7503,negative
+2026-02-27,The Times of India,"Rising AI pressure, weak Q3 performance weigh on Capillary shares",3,0.0097,0.9712,0.0191,-0.9615,negative
+2026-02-27,The Times of India,"Motilal Oswal Alternates raises Rs 1,700-crore fund",1,0.2012,0.0194,0.7794,0.1818,neutral
+2026-02-27,The Times of India,IRFC OFS draws tepid retail participation,1,0.1286,0.7597,0.1117,-0.6311,negative
+2026-02-27,The Punch,Analysts back MPC’s 50 basis-point rate cut,2,0.1317,0.6768,0.1916,-0.5451,negative
+2026-02-27,The Times of India,DII flows into equity hit 10-month low in February,4,0.0104,0.9676,0.022,-0.9572,negative
+2026-02-26,The Punch,UK-backed Lebara enters Nigeria’s telecom market,1,0.3392,0.0074,0.6535,0.3318,neutral
+2026-02-26,The Times of India,"Value stocks rally shows why profit matters, not just narrative",4,0.0902,0.0341,0.8757,0.0562,neutral
+2026-02-26,Bikeexif.com,Road Tested: The NEXX X.RALLY and X.TR Helmets,1,0.1342,0.0099,0.8558,0.1243,neutral
+2026-02-26,GlobeNewswire,Hepsiburada Announces Fourth Quarter and Full Year 2025 Financial Results,2,0.1154,0.0429,0.8417,0.0725,neutral
+2026-02-26,PBS,Average U.S. long-term mortgage rate dips below 6% for the first time since 2022,1,0.013,0.9689,0.018,-0.9559,negative
+2026-02-26,Commercial Observer,An Oklahoma Aluminum Plant Says a Lot About Industrial Real Estate and Tariffs,1,0.0429,0.0228,0.9342,0.0201,neutral
+2026-02-26,Boston Herald,Mortgage rates dip below 6%,1,0.0248,0.9174,0.0579,-0.8926,negative
+2026-02-26,NerdWallet,5% Mortgage Rates Are Here. Will They Last?,2,0.0581,0.0385,0.9034,0.0196,neutral
+2026-02-26,New Zealand Herald,"Port of Tauranga lifts half-year profit by 16%, raises earnings guidance",2,0.9482,0.0322,0.0196,0.916,positive
+2026-02-26,OilPrice.com,The U.S. Takes A Huge Step In Becoming Rare Earth Independent,1,0.2745,0.0088,0.7167,0.2657,neutral
+2026-02-26,CBS News,Mortgage rates fall below 6% for the first time since 2022,1,0.0133,0.9702,0.0165,-0.9569,negative
+2026-02-26,Fortune,"For the first time since 2022, the average U.S. mortgage rates is below 6%",1,0.012,0.956,0.032,-0.9439,negative
+2026-02-26,Financial Post,"World’s top money managers favour emerging markets, Citi says",2,0.3589,0.0174,0.6237,0.3416,neutral
+2026-02-26,CBS News,3 times mortgage interest rates could fall this March,1,0.0105,0.9564,0.0331,-0.9459,negative
+2026-02-26,Lithub.com,"This week, the stock market lost $200 billion over a short story.",2,0.0082,0.9612,0.0306,-0.953,negative
+2026-02-26,Rlsbb.to,Bloomberg Businessweek USA - March 2026,1,0.0279,0.0287,0.9434,-0.0007,neutral
+2026-02-26,New York Post,Mortgage rates dip below 6% for first time since 2022 — just in time for spring buying season,1,0.0227,0.9451,0.0322,-0.9223,negative
+2026-02-26,The Times of India,Why Nasdaq down today – Nasdaq crashes over 2% as Nvidia earnings shock sparks AI bubble fears – here’s the top US stock market losers today,6,0.0217,0.9303,0.048,-0.9087,negative
+2026-02-26,Abcnews.com,Average US long-term mortgage rate dips below 6% for the first time since late 2022,1,0.0124,0.9692,0.0184,-0.9568,negative
+2026-02-26,Boston Herald,"For the first time since 2022, average US long-term mortgage rate dips below 6%",1,0.0176,0.9621,0.0204,-0.9445,negative
+2026-02-26,Ibtimes.com.au,Matt Hardy Says WrestleMania 42 Ticket Price Is Too High,1,0.0183,0.7747,0.207,-0.7564,negative
+2026-02-26,Bitcoinist,Ripple Makes New AI Bet As XRP Ledger Targets Agentic Payments,1,0.4091,0.0139,0.577,0.3952,neutral
+2026-02-26,The Times of India,Juice or just a crunch? Apple Pay is polishing its India plans,1,0.319,0.0454,0.6356,0.2736,neutral
+2026-02-26,Insurance Journal,Insurers See Themselves Shielded From Private Credit Worries,1,0.0479,0.1318,0.8203,-0.0839,neutral
+2026-02-26,The Times of India,"US stock market crashes big: Why Dow, Nasdaq, S&P 500 in deep red today? Nvidia stock crashes, Gold and Silver prices also sink",4,0.0146,0.9181,0.0673,-0.9035,negative
+2026-02-26,BusinessLine,Derivatives need guardrails as market grows: NSE CEO,2,0.088,0.026,0.886,0.0619,neutral
+2026-02-26,Plos.org,Strategies for achieving a healthy oral cholera vaccine market: Model-enabled scenario exploration of supply and demand dynamics,2,0.3042,0.0092,0.6866,0.295,neutral
+2026-02-26,Protothema.gr,"Up to €800,000 in fines, automatic website shutdowns and 10-year prison terms under new illegal gambling bill",1,0.0122,0.945,0.0428,-0.9328,negative
+2026-02-26,GlobeNewswire,ING publishes 2025 Annual Report,1,0.018,0.059,0.923,-0.041,neutral
+2026-02-26,GlobeNewswire,"Buy Now Pay Later Platforms Market Report 2026, Profiles of Afterpay, Klarna, Affirm, Zip, Sezzle, PayPal, Splitit, Perpay, Navalo, FuturePay - Trends, Opportunities, and Forecasts to 2031",1,0.0471,0.0164,0.9365,0.0307,neutral
+2026-02-26,BusinessLine,Luxembourg Finance Minister visits GIFT City,1,0.0824,0.0412,0.8764,0.0411,neutral
+2026-02-26,Globalresearch.ca,Regime Change at the Federal Reserve: From Big Bank Bailouts to Local Productivity,1,0.0627,0.0229,0.9144,0.0398,neutral
+2026-02-26,Hurriyet Daily News,IMF warns US of risks from tariffs and rising debt,1,0.039,0.9039,0.057,-0.8649,negative
+2026-02-26,GlobeNewswire,"Automotive Fuel Injector Industry Report 2026-2035: A $109.21 Billion Market by 2030, Driven by Sustainability, Digitalization and Smart Mobility Technologies",1,0.6533,0.0087,0.3379,0.6446,positive
+2026-02-26,Globalresearch.ca,Winning the War of the World,1,0.1494,0.0409,0.8097,0.1084,neutral
+2026-02-26,Geeky Gadgets,2028 Global Intelligence Crisis Explained : AI Job Losses & Wage Pressure,1,0.0093,0.9485,0.0422,-0.9392,negative
+2026-02-26,The Times of India,Global Market | Japan’s hawkish turn? BOJ’s Takata warns of inflation overshoot,3,0.0642,0.8511,0.0847,-0.7869,negative
+2026-02-26,BusinessLine,"IMF sees 'buoyant' US economy accelerating this year but warns of risks from tariffs, rising debt",1,0.8904,0.0817,0.0279,0.8087,positive
+2026-02-26,Financial Post,"Australian Capex Powered by Renewables, Backing Hawkish RBA Tilt",1,0.1031,0.7926,0.1042,-0.6895,negative
+2026-02-25,ABC News (AU),RBA governor Michelle Bullock says she doesn't think inflation is taking off again,2,0.1018,0.5955,0.3027,-0.4937,negative
+2026-02-25,Dailyreckoning.com,Small Cap Bargains in Brazil,1,0.163,0.3647,0.4723,-0.2017,neutral
+2026-02-25,ABC News (AU),"Live: Chalmers in inflation 'denial', shadow treasurer says",1,0.0708,0.6942,0.235,-0.6235,negative
+2026-02-25,Fair Observer,The Warm Illusion of Winter Prices — Signal or Mirage?,3,0.0635,0.0764,0.8601,-0.0129,neutral
+2026-02-25,CBS News,What's the mortgage interest rate forecast for March 2026?,1,0.0241,0.0645,0.9114,-0.0404,neutral
+2026-02-25,Fortune,"Days before the national debt is due to hit $39 trillion, President Trump didn’t mention it once during the longest State of the Union ever",1,0.0782,0.0584,0.8634,0.0198,neutral
+2026-02-25,Plos.org,How does the climate risk affect the firm growth: Evidence from China,2,0.0939,0.0157,0.8904,0.0782,neutral
+2026-02-25,Financial Post,"Banxico Has Room for More Interest Rate Cuts, Deputy Governor Says",1,0.6816,0.1202,0.1982,0.5614,positive
+2026-02-25,The Times of India,Geopolitical heat lifts inflation fears but RBI's repo rate hike unlikely,3,0.499,0.3907,0.1103,0.1084,positive
+2026-02-25,Yahoo Entertainment,"Best money market account rates today, February 25, 2026 (secure up to 4.01% APY)",2,0.0973,0.0164,0.8864,0.0809,neutral
+2026-02-25,Boston Herald,"Editorial: Boston needs more housing ASAP, roll back requirements",1,0.6924,0.0167,0.2909,0.6757,positive
+2026-02-25,Financial Post,Bank of Thailand Surprises With 4-2 Vote to Cut Key Rate,1,0.0633,0.7048,0.2319,-0.6415,negative
+2026-02-25,The Punch,MPC’s modest rate cut sends positive signal – OPS,1,0.7774,0.1184,0.1042,0.659,positive
+2026-02-25,CounterPunch,Trump’s 2026 SOTU Speech: Economic Obfuscation and Political Theater,1,0.0332,0.0466,0.9202,-0.0133,neutral
+2026-02-25,The Times of India,A look at Trump's false and misleading claims in his State of the Union speech,1,0.033,0.067,0.9,-0.034,neutral
+2026-02-25,The Times of India,Yen under pressure after Takaichi report; Aussie higher on inflation,2,0.6402,0.2879,0.0719,0.3522,positive
+2026-02-24,Financial Post,PHX Energy Announces a Special Dividend and Record Fourth Quarter and Annual Revenue Supported by Strong RSS Activity,3,0.9518,0.022,0.0262,0.9299,positive
+2026-02-24,Financial-planning.com,What AI stock selloffs may be getting wrong in wealth management,1,0.0205,0.7208,0.2587,-0.7003,negative
+2026-02-24,Econbrowser.com,Guest Contribution: “Understanding Bond-Stock Price Comovements”,1,0.1356,0.0103,0.8542,0.1253,neutral
+2026-02-24,The Times of India,How the AI boom is fueling the South Korean economy - here's the breakdown,1,0.0614,0.0243,0.9143,0.0371,neutral
+2026-02-24,New Zealand Herald,An OCR alternative...could KiwiSaver be used to control inflation? - Inside Economics,1,0.0966,0.0161,0.8872,0.0805,neutral
+2026-02-24,CBS News,What is the highest gold price in history? Here's how it's changed over the past year.,1,0.0414,0.0405,0.918,0.0009,neutral
+2026-02-24,The Times of India,"US Stocks: Fed's Cook says AI triggering big changes, sees possible short-term unemployment rise",3,0.0542,0.8654,0.0803,-0.8112,negative
+2026-02-24,Barchart.com,Stocks Rebound as Software Stocks Recover,1,0.2531,0.7003,0.0466,-0.4472,negative
+2026-02-24,Theindianpanorama.news,"Relief for US homebuyers as mortgage rates dip to 6.01%, lowest level in over 3 years — The Indian Panorama",1,0.0208,0.9651,0.0142,-0.9443,negative
