@@ -1922,6 +1922,22 @@ pct = delta / prev["Close"] * 100
 rsi = latest.get("rsi", 0)
 pol = float(sentiment_index)
 
+nifty_price = nifty.get("price") if isinstance(nifty, dict) else None
+nifty_pct = nifty.get("pct") if isinstance(nifty, dict) else None
+
+if nifty_price is not None and nifty_pct is not None:
+    nifty_card_val = f"{nifty_price:,.2f}"
+    nifty_card_color = "#1db954" if nifty_pct >= 0 else "#e8372a"
+    nifty_card_bg = (
+        "linear-gradient(160deg, #041a0e, #0a0c14)"
+        if nifty_pct >= 0
+        else "linear-gradient(160deg, #1a0808, #0a0c14)"
+    )
+else:
+    nifty_card_val = "N/A"
+    nifty_card_color = "#334155"
+    nifty_card_bg = "linear-gradient(160deg, #0d0f1a, #0a0c14)"
+
 with c1:
     st.markdown(mcard(
         f"{xgb_f1:.3f}",
@@ -1971,14 +1987,12 @@ with c5:
         pol_bg,
     ), unsafe_allow_html=True)
 with c6:
-    cr_color = "#e8372a" if crash_prob > 0.6 else "#f59e0b" if crash_prob >= 0.35 else "#1db954"
-    cr_bg = "linear-gradient(160deg, #1a0808, #0a0c14)" if crash_prob > 0.6 else "linear-gradient(160deg, #0d0f1a, #0a0c14)" if crash_prob >= 0.35 else "linear-gradient(160deg, #041a0e, #0a0c14)"
     st.markdown(mcard(
-        f"{crash_risk}%",
-        "CRASH RISK",
-        cr_color,
-        cr_color,
-        cr_bg,
+        nifty_card_val,
+        "NIFTY 50 LIVE",
+        nifty_card_color,
+        nifty_card_color,
+        nifty_card_bg,
     ), unsafe_allow_html=True)
 
 st.markdown("")
@@ -2018,7 +2032,11 @@ gdp_color = "#38bdf8" if gdp_growth >= 0 else "#f59e0b"
 cpi_color = "#38bdf8" if cpi_inflation <= 3 else "#f59e0b" if cpi_inflation <= 5 else "#ef4444"
 repo_color = "#f59e0b" if repo_rate > 0 else "#38bdf8"
 
+nifty_snap_value = nifty_card_val
+nifty_snap_color = nifty_card_color
+
 snapshot_rows = [
+    ("NIFTY 50 Live", nifty_snap_value, nifty_snap_color),
     ("RSI (14)", f"{rsi:.0f}", rsi_color),
     ("MACD", f"{macd_val:+.4f}", macd_color),
     ("MACD Histogram", f"{macd_hist:+.4f}", macd_hist_color),
