@@ -5,13 +5,13 @@ import joblib
 
 # Load model and encoder
 model = joblib.load("../../data/models/xgb_model.pkl")
-le = joblib.load("../../data/models/label_encoder.pkl")
+le    = joblib.load("../../data/models/label_encoder.pkl")
 
 # Load full dataset
 train = pd.read_csv("../../data/exports/NIFTY50_train.csv")
-val = pd.read_csv("../../data/exports/NIFTY50_validation.csv")
-test = pd.read_csv("../../data/exports/NIFTY50_test.csv")
-full = pd.concat([train, val, test]).reset_index(drop=True)
+val   = pd.read_csv("../../data/exports/NIFTY50_validation.csv")
+test  = pd.read_csv("../../data/exports/NIFTY50_test.csv")
+full  = pd.concat([train, val, test]).reset_index(drop=True)
 full["date"] = pd.to_datetime(full["date"])
 
 # Load sentiment
@@ -23,22 +23,15 @@ sent["date"] = pd.to_datetime(sent["date"])
 
 full = full.merge(sent, on="date", how="left")
 if "polarity_score" in full.columns:
-    full.rename(
-        columns={"polarity_score": "daily_sentiment_index"}, inplace=True)
+    full.rename(columns={"polarity_score": "daily_sentiment_index"}, inplace=True)
 full["daily_sentiment_index"] = full["daily_sentiment_index"].fillna(0.0)
 
 FEATURES = [
-    "zscore_value", "log_return", "psy_12", "rsi",
+    "zscore_value", "log_return", "rsi",
     "macd", "macd_signal", "macd_hist",
     "daily_sentiment_index",
     "gdp_growth", "cpi_inflation", "repo_rate"
 ]
-
-if "psy_12" not in full.columns:
-    close_col = "close" if "close" in full.columns else "Close" if "Close" in full.columns else None
-    if close_col is not None:
-        up_days = (full[close_col].diff() > 0).astype(float)
-        full["psy_12"] = up_days.rolling(12).mean() * 100.0
 
 full = full.dropna(subset=FEATURES)
 
@@ -67,38 +60,38 @@ print(f"{'Date':<12} {'Expected':<10} {'Predicted':<10} "
 print("-" * 75)
 
 correct = 0
-total = 0
+total   = 0
 
 for date_str, expected, event in known_events:
-
+    
     # Find closest date in dataset
     target = pd.Timestamp(date_str)
     full["diff"] = abs(full["date"] - target)
     row = full.nsmallest(1, "diff")
-
+    
     if len(row) == 0:
         print(f"{date_str:<12} — no data found")
         continue
-
+    
     actual_date = str(row["date"].values[0])[:10]
-    X = row[FEATURES].values
-
+    X           = row[FEATURES].values
+    
     # Get probabilities
-    probs = model.predict_proba(X)[0]
-    pred_enc = model.predict(X)[0]
+    probs     = model.predict_proba(X)[0]
+    pred_enc  = model.predict(X)[0]
     predicted = le.inverse_transform([pred_enc])[0]
-
+    
     # Map probabilities to class names
     prob_dict = dict(zip(le.classes_, probs))
-    bub_pct = prob_dict.get("Bubble", 0)
-    cra_pct = prob_dict.get("Crash",  0)
-    nor_pct = prob_dict.get("Normal", 0)
-
+    bub_pct   = prob_dict.get("Bubble", 0)
+    cra_pct   = prob_dict.get("Crash",  0)
+    nor_pct   = prob_dict.get("Normal", 0)
+    
     is_correct = "✅" if predicted == expected else "❌"
     if predicted == expected:
         correct += 1
     total += 1
-
+    
     print(f"{actual_date:<12} {expected:<10} {predicted:<10} "
           f"{bub_pct:<8.1%} {cra_pct:<8.1%} {nor_pct:<8.1%} "
           f"{is_correct:<5} {event}")
@@ -117,17 +110,17 @@ for date_str, expected, event in known_events:
     target = pd.Timestamp(date_str)
     full["diff"] = abs(full["date"] - target)
     row = full.nsmallest(1, "diff")
-
+    
     if len(row) == 0:
         continue
-
-    actual_date = str(row["date"].values[0])[:10]
+    
+    actual_date  = str(row["date"].values[0])[:10]
     actual_label = row["label"].values[0]
-    zscore = row["zscore_value"].values[0] if "zscore_value" in row else "N/A"
-    bsadf = row["bsadf_score"].values[0] if "bsadf_score" in row else "N/A"
-
+    zscore       = row["zscore_value"].values[0] if "zscore_value" in row else "N/A"
+    bsadf        = row["bsadf_score"].values[0]  if "bsadf_score"  in row else "N/A"
+    
     match = "✅" if actual_label == expected else "⚠️"
-
+    
     print(f"{actual_date:<12} {actual_label:<15} "
           f"{zscore:<10.3f} "
           f"{float(bsadf):<10.3f} {match} {event}")

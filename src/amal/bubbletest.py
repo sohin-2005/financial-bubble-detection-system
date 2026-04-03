@@ -11,7 +11,7 @@ import numpy as np
 import joblib
 
 FEATURES = [
-    "zscore_value", "log_return", "psy_12", "rsi",
+    "zscore_value", "log_return", "rsi",
     "macd", "macd_signal", "macd_hist",
     "daily_sentiment_index",
     "gdp_growth", "cpi_inflation", "repo_rate"
@@ -19,31 +19,16 @@ FEATURES = [
 
 CLASSES = np.array(["Bubble", "Crash", "Normal"])
 
-# Keep the XGB feature ordering exactly as in training
-FEATURES_XGB = [
-    "zscore_value",
-    "log_return",
-    "psy_12",
-    "rsi",
-    "macd",
-    "macd_signal",
-    "macd_hist",
-    "daily_sentiment_index",
-    "gdp_growth",
-    "cpi_inflation",
-    "repo_rate",
-]
-
 # ── Load models ───────────────────────────────────────────────────
-xgb_model = joblib.load("../../data/models/xgb_model.pkl")
-rf_model = joblib.load("../../data/models/rf_model.pkl")
+xgb_model      = joblib.load("../../data/models/xgb_model.pkl")
+rf_model       = joblib.load("../../data/models/rf_model.pkl")
 stacking_model = joblib.load("../../data/models/stacking_model.pkl")
-stacking_scaler = joblib.load("../../data/models/stacking_scaler.pkl")
-le = joblib.load("../../data/models/label_encoder.pkl")
+stacking_scaler= joblib.load("../../data/models/stacking_scaler.pkl")
+le             = joblib.load("../../data/models/label_encoder.pkl")
 
 
 def proba_fixed_order(clf, X) -> np.ndarray:
-    proba = np.zeros((len(X), len(CLASSES)))
+    proba     = np.zeros((len(X), len(CLASSES)))
     clf_proba = clf.predict_proba(X)
     for j, cls in enumerate(clf.classes_):
         class_idx = int(cls)
@@ -59,60 +44,49 @@ def entropy(p, eps=1e-12):
 
 def build_meta_features(rf_probs, xgb_probs):
     diff_bubble = (rf_probs[:, 0] - xgb_probs[:, 0]).reshape(-1, 1)
-    diff_crash = (rf_probs[:, 1] - xgb_probs[:, 1]).reshape(-1, 1)
-    rf_conf = rf_probs.max(axis=1).reshape(-1, 1)
-    xgb_conf = xgb_probs.max(axis=1).reshape(-1, 1)
-    max_conf = np.maximum(rf_conf, xgb_conf)
-    H_rf = entropy(rf_probs).reshape(-1, 1)
-    H_xgb = entropy(xgb_probs).reshape(-1, 1)
+    diff_crash  = (rf_probs[:, 1] - xgb_probs[:, 1]).reshape(-1, 1)
+    rf_conf     = rf_probs.max(axis=1).reshape(-1, 1)
+    xgb_conf    = xgb_probs.max(axis=1).reshape(-1, 1)
+    max_conf    = np.maximum(rf_conf, xgb_conf)
+    H_rf        = entropy(rf_probs).reshape(-1, 1)
+    H_xgb       = entropy(xgb_probs).reshape(-1, 1)
     return np.hstack([rf_probs, xgb_probs, diff_bubble, diff_crash,
                       rf_conf, xgb_conf, max_conf, H_rf, H_xgb])
 
 
 def predict_xgb(X):
-    # Enforce training feature order to avoid shape mismatch
-    if isinstance(X, pd.DataFrame):
-        X = X[FEATURES_XGB].values
     probs = xgb_model.predict_proba(X)[0]
-    pred = le.inverse_transform([xgb_model.predict(X)[0]])[0]
+    pred  = le.inverse_transform([xgb_model.predict(X)[0]])[0]
     return pred, dict(zip(le.classes_, probs))
 
 
 def predict_stack(X):
-    rf_p = proba_fixed_order(rf_model,  X)
-    xgb_p = proba_fixed_order(xgb_model, X)
-    meta = build_meta_features(rf_p, xgb_p)
+    rf_p   = proba_fixed_order(rf_model,  X)
+    xgb_p  = proba_fixed_order(xgb_model, X)
+    meta   = build_meta_features(rf_p, xgb_p)
     meta_s = stacking_scaler.transform(meta)
-    probs = stacking_model.predict_proba(meta_s)[0]
-    pred = le.inverse_transform([stacking_model.predict(meta_s)[0]])[0]
+    probs  = stacking_model.predict_proba(meta_s)[0]
+    pred   = le.inverse_transform([stacking_model.predict(meta_s)[0]])[0]
     return pred, dict(zip(le.classes_, probs))
 
 
 # ── Load data ─────────────────────────────────────────────────────
 train = pd.read_csv("../../data/exports/NIFTY50_train.csv")
-val = pd.read_csv("../../data/exports/NIFTY50_validation.csv")
-test = pd.read_csv("../../data/exports/NIFTY50_test.csv")
-full = pd.concat([train, val, test]).reset_index(drop=True)
+val   = pd.read_csv("../../data/exports/NIFTY50_validation.csv")
+test  = pd.read_csv("../../data/exports/NIFTY50_test.csv")
+full  = pd.concat([train, val, test]).reset_index(drop=True)
 full["date"] = pd.to_datetime(full["date"])
 
-s1 = pd.read_csv("../../data/exports/nifty50_daily_sentiment.csv")
-s2 = pd.read_csv("../../data/exports/nifty50_validation_sentiment.csv")
-s3 = pd.read_csv("../../data/exports/nifty50_test_sentiment.csv")
+s1   = pd.read_csv("../../data/exports/nifty50_daily_sentiment.csv")
+s2   = pd.read_csv("../../data/exports/nifty50_validation_sentiment.csv")
+s3   = pd.read_csv("../../data/exports/nifty50_test_sentiment.csv")
 sent = pd.concat([s1, s2, s3]).drop_duplicates(subset=["date"])
 sent["date"] = pd.to_datetime(sent["date"])
 
 full = full.merge(sent, on="date", how="left")
 if "polarity_score" in full.columns:
-    full.rename(
-        columns={"polarity_score": "daily_sentiment_index"}, inplace=True)
+    full.rename(columns={"polarity_score": "daily_sentiment_index"}, inplace=True)
 full["daily_sentiment_index"] = full["daily_sentiment_index"].fillna(0.0)
-
-if "psy_12" not in full.columns:
-    close_col = "close" if "close" in full.columns else "Close" if "Close" in full.columns else None
-    if close_col is not None:
-        up_days = (full[close_col].diff() > 0).astype(float)
-        full["psy_12"] = up_days.rolling(12).mean() * 100.0
-
 full = full.dropna(subset=FEATURES)
 
 
@@ -122,8 +96,8 @@ def get_row(date_str):
     if len(row) == 0:
         return None, None, None
     return row[FEATURES].values.reshape(1, -1), \
-        str(row["date"].values[0])[:10], \
-        row["label"].values[0]
+           str(row["date"].values[0])[:10], \
+           row["label"].values[0]
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -162,18 +136,16 @@ for date_str, expected, event in real_events:
     if X is None:
         continue
 
-    xgb_pred,  xgb_p = predict_xgb(X)
-    stk_pred,  stk_p = predict_stack(X)
+    xgb_pred,  xgb_p  = predict_xgb(X)
+    stk_pred,  stk_p  = predict_stack(X)
 
     xgb_ok = "✅" if xgb_pred == expected else "❌"
     stk_ok = "✅" if stk_pred == expected else "❌"
 
     label_warn = "" if actual_label == expected else f" ⚠️label={actual_label}"
 
-    if xgb_pred == expected:
-        xgb_r += 1
-    if stk_pred == expected:
-        stk_r += 1
+    if xgb_pred == expected: xgb_r += 1
+    if stk_pred == expected: stk_r += 1
 
     print(f"{actual_date:<12} {expected:<9} {xgb_pred:<9} {stk_pred:<9} "
           f"{xgb_ok:<6} {stk_ok:<6} {event}{label_warn}")
@@ -201,26 +173,26 @@ synthetic_cases = [
     ("Bubble cheap money",     "Bubble",
      2.5, 0.012, 73.0, 310, 240,  70, 0.60, 7.5, 4.0, 3.5),
     ("Bubble negative news",   "Bubble",
-     2.9, 0.014, 76.0, 390, 300,  90, -0.25, 6.5, 6.0, 5.5),
+     2.9, 0.014, 76.0, 390, 300,  90,-0.25, 6.5, 6.0, 5.5),
     ("Tech bubble high CPI",   "Bubble",
      3.2, 0.022, 80.0, 480, 370, 110, 0.80, 5.5, 8.0, 4.5),
     ("Borderline Bubble",      "Bubble",
      2.0, 0.005, 65.0, 120,  95,  25, 0.30, 6.8, 4.5, 6.0),
     # CRASHES
     ("Textbook Crash",         "Crash",
-     -3.8, -0.090, 15.0, -700, -520, -180, -0.95, -6.0, 3.0, 8.5),
+    -3.8,-0.090, 15.0,-700,-520,-180,-0.95,-6.0, 3.0, 8.5),
     ("Moderate Crash",         "Crash",
-     -2.3, -0.040, 25.0, -350, -270, -80, -0.65, 2.0, 7.0, 7.0),
+    -2.3,-0.040, 25.0,-350,-270, -80,-0.65, 2.0, 7.0, 7.0),
     # NORMALS
     ("Perfect Normal",         "Normal",
      0.2, 0.001, 51.0,  15,  12,   3, 0.02, 6.5, 4.0, 6.5),
     ("Slightly elevated",      "Normal",
      1.2, 0.004, 58.0,  80,  65,  15, 0.18, 6.0, 4.3, 6.0),
     # EDGE CASES
-    ("High RSI neutral zscore", "Normal",
+    ("High RSI neutral zscore","Normal",
      0.5, 0.003, 72.0,  30,  25,   5, 0.10, 6.0, 4.5, 6.5),
-    ("Bubble zscore neg return", "Bubble",
-     2.4, -0.008, 68.0, 250, 200,  50, -0.15, 7.0, 5.0, 5.5),
+    ("Bubble zscore neg return","Bubble",
+     2.4,-0.008, 68.0, 250, 200,  50,-0.15, 7.0, 5.0, 5.5),
 ]
 
 print("\n\n" + "=" * 80)
@@ -233,9 +205,9 @@ print("-" * 80)
 xgb_s = stk_s = 0
 
 for row in synthetic_cases:
-    name = row[0]
-    expected = row[1]
-    vals = row[2:]
+    name    = row[0]
+    expected= row[1]
+    vals    = row[2:]
 
     X = np.array([list(vals)]).reshape(1, -1)
 
@@ -245,10 +217,8 @@ for row in synthetic_cases:
     xgb_ok = "✅" if xgb_pred == expected else "❌"
     stk_ok = "✅" if stk_pred == expected else "❌"
 
-    if xgb_pred == expected:
-        xgb_s += 1
-    if stk_pred == expected:
-        stk_s += 1
+    if xgb_pred == expected: xgb_s += 1
+    if stk_pred == expected: stk_s += 1
 
     print(f"{expected:<9} {xgb_pred:<9} {stk_pred:<9} "
           f"{xgb_ok:<6} {stk_ok:<6} {name}")
@@ -269,7 +239,7 @@ print("=" * 80)
 
 xgb_total = xgb_r + xgb_s
 stk_total = stk_r + stk_s
-n_total = n_real + n_syn
+n_total   = n_real + n_syn
 
 print(f"\n{'Model':<20} {'Real':<15} {'Synthetic':<15} {'Overall':<15}")
 print("-" * 60)

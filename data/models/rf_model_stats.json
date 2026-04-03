@@ -1,0 +1,25 @@
+{
+  "model": "RandomForest",
+  "val_f1": 0.9098,
+  "test_f1": 0.8833,
+  "features": [
+    "zscore_value",
+    "log_return",
+    "rsi",
+    "macd",
+    "macd_signal",
+    "macd_hist",
+    "realized_vol_10d",
+    "realized_vol_63d",
+    "vol_ratio",
+    "drawdown",
+    "trend_21d",
+    "price_accel",
+    "ret_skew_21d",
+    "ret_kurt_21d",
+    "vol_zscore",
+    "gdp_growth",
+    "cpi_inflation",
+    "repo_rate"
+  ]
+}

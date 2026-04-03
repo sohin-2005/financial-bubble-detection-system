@@ -1,0 +1,19 @@
+{
+  "model": "XGBoost",
+  "val_f1": 0.8805,
+  "test_f1": 0.9182,
+  "features": [
+    "zscore_value",
+    "log_return",
+    "rsi",
+    "macd",
+    "macd_signal",
+    "macd_hist",
+    "daily_sentiment_index",
+    "gdp_growth",
+    "cpi_inflation",
+    "repo_rate"
+  ],
+  "trained_on": "NIFTY50 2008-2020",
+  "tested_on": "NIFTY50 2023-2024"
+}

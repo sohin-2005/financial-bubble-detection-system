@@ -75,17 +75,18 @@ def compute_bsadf(
     return pd.Series(bsadf_scores, index=prices.index)
 
 
-def compute_zscore_labels(df: pd.DataFrame, price_col: str = "Close", window: int = 20) -> pd.DataFrame:
+def compute_zscore_labels(df: pd.DataFrame, price_col: str = "Close", window: int = 252) -> pd.DataFrame:
     """
     Hybrid bubble labeling for dashboard:
-    - Crash: Z-score < -2
+    - Crash: Z-score < -2.5 (tightened from -2 to reduce false positives)
     - Bubble: PSY/BSADF threshold + up-return direction
-    - Bubble fallback: Z-score > +2
+    - Bubble fallback: Z-score > +2.5 AND RSI > 60
+    Uses a 252-day (1 trading year) rolling window for stable long-term deviation.
     """
     df = df.copy()
-    rolling_mean = df[price_col].rolling(window=window).mean()
-    rolling_std = df[price_col].rolling(window=window).std()
-    zscore = (df[price_col] - rolling_mean) / rolling_std
+    rolling_mean = df[price_col].rolling(window=window, min_periods=60).mean()
+    rolling_std = df[price_col].rolling(window=window, min_periods=60).std()
+    zscore = (df[price_col] - rolling_mean) / rolling_std.replace(0, np.nan)
 
     df["rolling_mean"] = rolling_mean
     df["rolling_std"] = rolling_std
@@ -127,14 +128,14 @@ def compute_zscore_labels(df: pd.DataFrame, price_col: str = "Close", window: in
 
     df["label"] = "Normal"
 
-    # Crash first
+    # ── Crash: sustained large negative deviation (tightened to -2.5) ──
     df.loc[
-        (df["zscore_value"] < -2.0) &
+        (df["zscore_value"] < -2.5) &
         (df["label"] == "Normal"),
         "label",
     ] = "Crash"
 
-    # PSY/BSADF bubble with direction filter
+    # ── PSY/BSADF bubble with direction filter ──
     df.loc[
         (df["bsadf_score"] >= upper_bound) &
         (df["log_return"] > 0) &
@@ -142,9 +143,10 @@ def compute_zscore_labels(df: pd.DataFrame, price_col: str = "Close", window: in
         "label",
     ] = "Bubble"
 
-    # Bubble fallback from Z-score
+    # ── Bubble fallback from Z-score (tightened: 2.5 + RSI > 60 confirmation) ──
     df.loc[
-        (df["zscore_value"] > 2.0) &
+        (df["zscore_value"] > 2.5) &
+        (df["rsi"] > 60) &
         (df["label"] == "Normal"),
         "label",
     ] = "Bubble"

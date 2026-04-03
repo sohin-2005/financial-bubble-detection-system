@@ -11,7 +11,6 @@ FEATURES = [
     "zscore_value",
     # Short term — daily signals
     "log_return",
-    "psy_12",
     "rsi",
     "macd",
     "macd_signal",
@@ -77,60 +76,6 @@ def load_data():
         else:
             df["daily_sentiment_index"] = df["daily_sentiment_index"].fillna(
                 0.0)
-
-    # Compute missing regime features if not present in exports
-    def add_regime_features(df: pd.DataFrame) -> pd.DataFrame:
-        close_col = "close" if "close" in df.columns else "Close" if "Close" in df.columns else None
-        if close_col is None:
-            return df
-
-        close = df[close_col]
-        if "log_return" not in df.columns:
-            df["log_return"] = np.log(close / close.shift(1))
-
-        if "psy_12" not in df.columns:
-            up_days = (close.diff() > 0).astype(float)
-            df["psy_12"] = up_days.rolling(12).mean() * 100.0
-
-        if "realized_vol_10d" not in df.columns:
-            df["realized_vol_10d"] = df["log_return"].rolling(
-                10).std() * np.sqrt(252)
-        if "realized_vol_63d" not in df.columns:
-            df["realized_vol_63d"] = df["log_return"].rolling(
-                63).std() * np.sqrt(252)
-        if "vol_ratio" not in df.columns:
-            df["vol_ratio"] = df["realized_vol_10d"] / \
-                (df["realized_vol_63d"] + 1e-8)
-
-        if "drawdown" not in df.columns:
-            rolling_max = close.rolling(252, min_periods=1).max()
-            df["drawdown"] = (close - rolling_max) / rolling_max
-
-        if "trend_21d" not in df.columns:
-            df["trend_21d"] = (
-                (close - close.rolling(21).mean())
-                / (close.rolling(21).std() + 1e-8)
-            )
-
-        if "price_accel" not in df.columns:
-            ret_21d = np.log(close / close.shift(21))
-            df["price_accel"] = ret_21d - ret_21d.shift(21)
-
-        if "ret_skew_21d" not in df.columns:
-            df["ret_skew_21d"] = df["log_return"].rolling(21).skew()
-        if "ret_kurt_21d" not in df.columns:
-            df["ret_kurt_21d"] = df["log_return"].rolling(21).kurt()
-
-        if "vol_zscore" not in df.columns:
-            vol = df["realized_vol_10d"]
-            df["vol_zscore"] = (vol - vol.rolling(252).mean()) / \
-                (vol.rolling(252).std() + 1e-8)
-
-        return df
-
-    train_df = add_regime_features(train_df)
-    val_df = add_regime_features(val_df)
-    test_df = add_regime_features(test_df)
 
     train_df = train_df.dropna(subset=FEATURES + ["label"])
     val_df = val_df.dropna(subset=FEATURES + ["label"])
