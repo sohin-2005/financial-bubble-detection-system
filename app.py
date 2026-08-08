@@ -660,7 +660,7 @@ with tab_stats:
                       "Normal": "background-color:#0a3020"}
             return colors.get(val, "")
 
-        styled = recent.style.applymap(color_label, subset=["Label"])
+        styled = recent.style.map(color_label, subset=["Label"])
         st.dataframe(styled, use_container_width=True)
 
     st.markdown("#### Z-Score Distribution")

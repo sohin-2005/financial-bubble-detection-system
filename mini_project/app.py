@@ -135,8 +135,13 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-MODEL_DIR = Path(__file__).resolve().parent / \
-    "financial-bubble-detection-system" / "data" / "models"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+MODEL_DIR = BASE_DIR / "data" / "models"
+
+print("MODEL_DIR =", MODEL_DIR)
+print("Exists =", MODEL_DIR.exists())
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PAGE CONFIG  (must be first Streamlit call)
@@ -1657,22 +1662,10 @@ if use_sentiment:
         df = merge_sentiment_with_prices(df, daily_sent)
         _sent_ph.empty()
     except Exception as exc:
-        _sent_ph.empty()
-        st.warning(f"Sentiment unavailable: {exc}")
-        if raw_sent.empty:
-            try:
-                from src.news_fetcher import fetch_all_news
-                debug_df = fetch_all_news(days_back=news_days)
-                errors = debug_df.attrs.get("errors", [])
-                if errors:
-                    st.warning("News sources failed: " + ", ".join(errors))
-
-                if not debug_df.empty:
-                    raw_sent = debug_df.copy()
-                    raw_sent["label"] = "neutral"
-                    raw_sent["polarity"] = 0.0
-            except Exception:
-                pass
+        import traceback
+        st.exception(exc)
+        st.code(traceback.format_exc())
+            
     if _sent_ph:
         _sent_ph.empty()
 else:
@@ -1915,6 +1908,7 @@ def mcard(value, label, accent, value_color, bg):
 
 
 stats = load_model_stats()
+
 xgb_stats = stats.get("xgb") or {}
 xgb_f1 = xgb_stats.get("test_f1", 0.0)
 delta = latest["Close"] - prev["Close"]
@@ -2413,7 +2407,7 @@ with tab_stats:
                           "Normal": "background-color:#0a3020"}
                 return colors.get(val, "")
 
-            styled = recent.style.applymap(color_label, subset=["Label"])
+            styled = recent.style.map(color_label, subset=["Label"])
             st.dataframe(styled, use_container_width=True)
 
     # Download

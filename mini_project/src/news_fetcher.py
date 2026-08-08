@@ -7,6 +7,8 @@ from urllib.parse import urlencode
 from urllib.request import urlopen, Request
 import ssl
 import certifi
+import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 import feedparser
 import pandas as pd

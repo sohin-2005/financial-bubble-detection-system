@@ -2,7 +2,8 @@ from __future__ import annotations
 
 import pandas as pd
 from transformers import pipeline
-
+import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
 class FinBERTAnalyzer:
     def __init__(self):
