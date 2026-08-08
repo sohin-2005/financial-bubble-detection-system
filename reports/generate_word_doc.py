@@ -1,6 +1,8 @@
-import os
+"""Regenerate reports/report_bubble_detection.docx from the text below."""
+
 import subprocess
 import sys
+from pathlib import Path
 
 try:
     import docx
@@ -59,5 +61,6 @@ doc.add_paragraph("• During training, the models inherently learn the historic
 doc.add_paragraph("• During live inference (app.py), the model fuses the daily sentiment index with the technical MACD/Z-scores and macro rates to produce the final confidence vote for Crash, Bubble, or Normal predictions.")
 doc.add_paragraph("• Fallback Heuristic Plan: If the ML model fails to load, the raw negative polarity of the sentiment index is programmed to linearly and directly increase the \"Crash Risk\" probability of the market.")
 
-doc.save('/Users/sohinsanthosh/bubble_detection_miniProject/mini_project/report_bubble_detection.docx')
-print("Saved to /Users/sohinsanthosh/bubble_detection_miniProject/mini_project/report_bubble_detection.docx")
+OUTPUT_PATH = Path(__file__).resolve().parent / "report_bubble_detection.docx"
+doc.save(OUTPUT_PATH)
+print(f"Saved to {OUTPUT_PATH}")

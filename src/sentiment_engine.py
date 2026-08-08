@@ -1,3 +1,14 @@
+"""
+SENTIMENT ENGINE
+================
+Scores financial headlines with FinBERT (ProsusAI/finbert) and aggregates them
+into a daily sentiment index that can be joined onto a price series.
+
+    FinBERTAnalyzer            wraps the HuggingFace sentiment pipeline
+    compute_daily_sentiment    headlines -> (daily index, scored headlines)
+    merge_sentiment_with_prices  joins the daily index onto an OHLCV frame
+"""
+
 from __future__ import annotations
 
 import pandas as pd
@@ -5,6 +16,7 @@ from transformers import pipeline
 
 
 class FinBERTAnalyzer:
+    """Lazy wrapper around the FinBERT sentiment-analysis pipeline."""
     def __init__(self):
         self._pipe = pipeline(
             "sentiment-analysis",
@@ -79,18 +91,6 @@ def merge_sentiment_with_prices(price_df: pd.DataFrame, daily_sent: pd.DataFrame
 
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
     df["date"] = df["date"].dt.tz_localize(None)
-
-    merged = pd.merge_asof(
-        df.sort_values("date"),
-        daily_sent.sort_values("date"),
-        on="date",
-        direction="backward",
-    )
-    merged = merged.sort_values("date")
-
-    # Carry the latest available sentiment forward; default to 0 when none exists yet
-    for col in ["avg_polarity", "sentiment_momentum"]:
-        if col in merged.columns:
-            merged[col] = merged[col].ffill().fillna(0.0)
-
+    merged = df.merge(daily_sent, on="date", how="left")
+    merged["avg_polarity"] = merged["avg_polarity"].fillna(0.0)
     return merged

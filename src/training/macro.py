@@ -5,7 +5,8 @@ import os
 from pathlib import Path
 
 # Resolve exports directory relative to repo root
-OUTPUT_DIR = (Path(__file__).resolve().parent.parent /
+# __file__ = <repo>/src/training/macro.py  ->  parents[2] = <repo>
+OUTPUT_DIR = (Path(__file__).resolve().parents[2] /
               "data" / "exports").resolve()
 
 

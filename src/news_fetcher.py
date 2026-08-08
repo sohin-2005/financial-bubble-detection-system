@@ -1,15 +1,29 @@
+"""
+NEWS FETCHER
+============
+Collects recent Indian-market headlines from three sources and returns them as
+one de-duplicated DataFrame:
+
+    NewsAPI          (optional, needs NEWS_API_KEY)
+    GNews            (optional, needs GNEWS_API_KEY)
+    RSS feeds        (always available, no key required)
+
+Every source is normalised to the same columns:
+    date, title, headline, link, source
+"""
+
 import os
+import ssl
 import json
 from pathlib import Path
-from dotenv import load_dotenv
 from typing import List, Dict
 from urllib.parse import urlencode
 from urllib.request import urlopen, Request
-import ssl
-import certifi
 
+import certifi
 import feedparser
 import pandas as pd
+from dotenv import load_dotenv
 
 
 DEFAULT_FEEDS = [
@@ -20,14 +34,8 @@ DEFAULT_FEEDS = [
     "https://feeds.reuters.com/reuters/INbusinessNews",
 ]
 
-# Load .env from possible roots (repo root and project root)
-_ENV_CANDIDATES = [
-    Path(__file__).resolve().parent.parent / ".env",
-    Path(__file__).resolve().parents[2] / ".env",
-]
-for env_path in _ENV_CANDIDATES:
-    if env_path.exists():
-        load_dotenv(env_path)
+# Load .env from the repo root (<repo>/src/news_fetcher.py -> <repo>/.env)
+load_dotenv(Path(__file__).resolve().parents[1] / ".env")
 
 
 def _parse_entry(entry) -> Dict:

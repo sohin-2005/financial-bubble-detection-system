@@ -1,3 +1,9 @@
+"""
+DATA INGESTION
+==============
+Thin wrapper over yfinance that returns a flat, tidy OHLCV DataFrame.
+"""
+
 import pandas as pd
 import yfinance as yf
 

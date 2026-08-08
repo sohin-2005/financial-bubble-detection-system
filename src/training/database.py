@@ -3,8 +3,9 @@ from pathlib import Path
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 
-# Load .env from project root (works when running from src/amal or project root)
-load_dotenv(Path(__file__).resolve().parent.parent.parent / ".env")
+# Load .env from the repo root, regardless of the current working directory.
+# __file__ = <repo>/src/training/database.py  ->  parents[2] = <repo>
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 
 def get_engine():
     """Create and return a SQLAlchemy database engine."""
