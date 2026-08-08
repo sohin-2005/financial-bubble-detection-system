@@ -10,6 +10,8 @@ through a stacked Random Forest + XGBoost ensemble.
 ## Quick start
 
 ```bash
+cd financial-bubble-detection-system
+
 python -m venv venv
 source venv/bin/activate          # Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -17,6 +19,9 @@ pip install -r requirements.txt
 cp .env.example .env              # optional — add free API keys
 streamlit run app.py
 ```
+
+Run everything from the project root — `app.py`, `data/`, `models/`, and `src/`
+all live here.
 
 The dashboard runs without any API keys: news falls back to public RSS feeds and
 macro indicators come from the cached `data/exports/macro_daily.csv`.
